@@ -1,0 +1,21 @@
+.mask {
+    background-color: rgb(0, 0, 0, .5);
+    height: 100%;
+    width: 100%;
+}
+
+.btn {
+    border: none;
+}
+
+.openStatus {
+    color: green;
+    font-weight: bold;
+    /* Green color for open status */
+}
+
+.closedStatus {
+    color: red;
+    font-weight: bold;
+    /* Red color for closed status */
+}

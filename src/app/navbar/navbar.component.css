@@ -22,3 +22,11 @@
     font-weight: bold;
 }
 
+.top-btns{
+    width: 50%;
+}
+
+.btn-container{
+    margin: auto;
+    text-align: center;
+}

@@ -1,0 +1,24 @@
+.logo-container{
+    text-align: center;
+}
+
+#logo{
+    width: 250px;
+    margin-top: 20px;
+}
+
+.request-bar-container{
+    background-color: #2c0e3c;
+    height: 64px;
+}
+
+.number-container{
+    margin: auto;
+}
+
+.number-text{
+    color: #7b4797;
+    font-size: 24px;
+    font-weight: bold;
+}
+

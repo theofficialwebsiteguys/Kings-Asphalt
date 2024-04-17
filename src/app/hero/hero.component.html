@@ -9,9 +9,10 @@
                     role="button">(914) 228-1500</a>
                 <p class="mb-3 openHours">
                     <span class="bold">Hours:</span>
-                    <span class="status bold" [ngClass]="{ 'openStatus': isOpen, 'closedStatus': !isOpen }">{{ isOpen ?
-                        ' Open' : ' Closed' }}</span>
-                    <span>{{ openingTime }}</span>
+                    <span class="status bold"
+                        [ngClass]="{ 'openStatus': isOpen, 'closedStatus': !isOpen, 'closingSoonStatus' : isClosingSoon}">{{isOpen
+                        ?' Open' : isClosingSoon ? ' Closing soon' : ' Closed' }}</span>
+                    <span class="bold">{{ openingTime }}</span>
                 </p>
             </div>
         </div>

@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
 import { HeroComponent } from '../hero/hero.component';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,7 +9,31 @@ import { CommonModule } from '@angular/common';
   templateUrl: './asphalt-services.component.html',
   styleUrl: './asphalt-services.component.scss'
 })
-export class AsphaltServicesComponent {
+export class AsphaltServicesComponent implements OnInit {
+
+  isOpen: boolean = false;
+  openingTime: string = '';
+
+  ngOnInit() {
+    this.updateStatus();
+    setInterval(() => {
+      this.updateStatus();
+    }, 60000); // Update every minute
+  }
+
+  updateStatus() {
+    const currentHour = new Date().getHours();
+    const openingHour = 7; // 7:00 AM
+    const closingHour = 22; // 10:00 PM
+
+    if (currentHour >= openingHour && currentHour < closingHour) {
+      this.isOpen = true;
+      this.openingTime = ` • Closes ${closingHour - 12}:00 PM`;
+    } else {
+      this.isOpen = false;
+      this.openingTime = ` • Opens at ${openingHour}:00 AM`;
+    }
+  }
 
   currentService: number = 0;
 

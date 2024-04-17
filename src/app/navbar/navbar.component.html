@@ -1,21 +1,31 @@
+<header
+    class="bar sticky-top flex-wrap align-items-center justify-content-center justify-content-md-between mb-4 border-bottom">
 
-<header class="bar sticky-top flex-wrap align-items-center justify-content-center justify-content-md-between mb-4 border-bottom">
-<div class="request-bar-container row">
-    <div class="col"></div>
-    <div class="btn-container col">
-        <button type="button" class="btn btn-outline-light top-btns">Request an Estimate</button>
-    </div>
-    <div class="btn-container col">
-        <button type="button" class="btn btn-outline-light top-btns">Set an Appointment</button>
-    </div>
-    <div class="col"></div>
-</div>
 
-<div class="logo-container row">
-    <div class="col"></div>
-    <div class="col"><img class="col" id="logo" src="../../assets/king-logo.webp" alt=""></div>
-    <div class="col number-container"><p class="number-text">(914) 228-1500</p></div>
-</div>
+    <div class="request-bar-container row">
+        <div class="col socials">
+            <a class="links" href="#"><i class="bi bi-instagram social-logos"></i></a>
+            <a class="links" href="#"><i class="bi bi-facebook social-logos"></i></a>
+        </div>
+        <div class="col">
+
+        </div>
+        <div class="col socials phone-email">
+            <a class="links" href="#"><i class="bi bi-telephone social-logos"></i></a>
+            <p class="number-text">(914) 228-1500</p>
+            <p class="number-text">|</p>
+            <p class="number-text">julios2k91&#64;gmail.com</p>
+        </div>
+    </div>
+
+    <div class="logo-container row">
+        <div class="col request-appt-container">
+        </div>
+        <div class="col"><img class="col" id="logo" src="../../assets/king-logo.webp" alt=""></div>
+        <div class="col request-appt-container">
+
+        </div>
+    </div>
 
 
 
@@ -34,7 +44,6 @@
         </ul>
     </li>
     <li><a href="#" class="nav-link px-2 link-dark">Seal Coating</a></li>
-    <li><a href="#" class="nav-link px-2 link-dark">Request an Estimate</a></li>
     <li><a href="#" class="nav-link px-2 link-dark">Gallery</a></li>
     <li><a href="#" class="nav-link px-2 link-dark">Reviews</a></li>
     <li class="nav-item dropdown">
@@ -49,7 +58,15 @@
     <li><a href="#" class="nav-link px-2 link-dark">Contact</a></li>
 
     </ul>
+    <div class="logo-container row">
+        <div class="col request-appt-container">
+            <button type="button" class="btn btn-outline-light top-btns" (click)="route('estimate')">Request an
+                Estimate</button>
+        </div>
+        <div class="col request-appt-container">
+            <button type="button" class="btn btn-outline-light top-btns">Set an Appointment</button>
+        </div>
+    </div>
 
 
-
-</header>  
+</header>

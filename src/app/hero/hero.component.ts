@@ -27,7 +27,7 @@ export class HeroComponent implements OnInit {
 
     if (currentHour >= openingHour && currentHour < closingHour) {
       this.isOpen = true;
-      this.openingTime = ` • Opens at ${closingHour}:00 PM`;
+      this.openingTime = ` • Closes ${closingHour-12}:00 PM`;
     } else {
       this.isOpen = false;
       this.openingTime = ` • Opens at ${openingHour}:00 AM`;

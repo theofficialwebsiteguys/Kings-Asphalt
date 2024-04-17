@@ -1,0 +1,107 @@
+<div class="px-4 pt-5 mb-5 text-center">
+    <h1 class="display-4 fw-bold content-header">Full-Service Asphalt Paving Company Westchester County, NY & Rockland County, NY</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">When you need any kind of asphalt service, count on Kings Highway Asphalt. Our specialties are asphalt paving, driveways, masonry, and more. You will enjoy working with our easy-going crew and there is always a manager on site. We use the latest machinery to make sure your job is completed efficiently. Take advantage of our 1-year residential driveway warranty. Contact us for a FREE same-day estimate. </p>
+      <br>
+      <p class="lead mb-4">With a free estimate, you are able to save money. Before we start on any project, we will give you an idea of how much it will cost. Once you have this information, you can decide which services you would like to move forward with. This way you won’t have to worry about any additional costs being added at the end of a project. If you’ve never needed asphalt work before, have no fear. We will break everything down in a way that is easy to understand. If you’re in need of a paving contractor in Rockland County, NY, give us a call today. </p>
+      <br>
+      <a href="https://www.bbb.org/us/ny/tomkins-cove/profile/paving-contractors/kings-highway-asphalt-inc-0121-173833?utm_campaign=bbb_seal&utm_content=Kings%20Highway%20Asphalt%20Inc&utm_medium=website&utm_source=seal_click_173833">BBB RATING: A+</a>
+    </div>
+    
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-3 mb-3 text-center cards">
+    <div class="col">
+        <div class="card-body">
+          <img src="../../assets/driveway-paving.webp" alt="">
+          <h1 class="card-title pricing-card-title m-3">Driveway Paving</h1>
+          <p class="card-text m-3">Get a 1-year residential driveway warranty from Kings Highway Asphalt. We're open seven days a week.</p>
+          <button type="button" class="w-100 btn btn-lg card-btn">Learn More</button>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card-body">
+          <img src="../../assets/masonry-image.webp" alt="">
+          <h1 class="card-title pricing-card-title m-3">Masonry</h1>
+          <p class="card-text m-3">Prevent accidents with masonry from Kings Highway Asphalt. We'll repair sidewalks, driveways, and more. </p>
+          <button type="button" class="w-100 btn btn-lg card-btn">Learn More</button>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card-body">
+          <img src="../../assets/line-striping-image.webp" alt="">
+          <h1 class="card-title pricing-card-title m-3">Line Striping</h1>
+          <p class="card-text m-3">Revitalize your parking lot's appearance and safety with our precise and durable line striping services</p>
+          <button type="button" class="w-100 btn btn-lg card-btn">Learn More</button>
+        </div>
+    </div>
+  </div>
+
+  <!-- <div class="ratio ratio-16x9 video-container">
+    <iframe src="../../assets/kings-highway-asphalt-video.mp4" title="YouTube video" allowfullscreen></iframe>
+  </div> -->
+
+<!-- video-player.component.html -->
+<div class="ratio ratio-16x9 video-container">
+    <video #videoPlayer controls preload="metadata" (loadedmetadata)="setupInitialFrame()">
+      <source src="../../assets/kings-highway-asphalt-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  
+
+    <div class="row g-0 overflow-hidden flex-md-row shadow-sm h-md-250 position-relative">
+      
+        <div class="col p-4 d-flex flex-column position-static review-background">
+           <!-- customer-reviews.component.html -->
+            <div class="customer-reviews-section">
+                <h3 class="d-inline-block mb-4">Satisfied Customer Reviews</h3>
+                <div class="review" *ngFor="let review of reviews">
+                <div class="row g-0 rounded overflow-hidden flex-md-row mb-4 h-md-250 position-relative">
+                    
+                    <h5 class="mb-0">{{ review.name }}</h5>
+                    <div>
+                        <ng-container *ngFor="let i of [].constructor(review.stars); let idx = index">
+                        <span class="fa fa-star checked star"></span>
+                        </ng-container>
+                        <ng-container *ngFor="let i of [].constructor(5 - review.stars); let idx = index">
+                        <span class="fa fa-star star"></span>
+                        </ng-container>
+                    </div>
+                    <p class="mb-auto">{{ review.comment }}</p>
+                    <div class="mb-1 text-muted">{{ review.date }}</div>
+            
+                </div>
+                </div>
+                <button class="btn card-btn mt-5">Read More Reviews</button>
+            </div>
+  
+        </div>
+
+        <div class="col-auto d-none d-lg-block">
+            <img src="../../assets/roller2.webp" alt="">
+        </div>
+    </div>
+
+    <div class="row g-0 overflow-hidden flex-md-row mb-4 h-md-250 position-relative">
+      
+        <div class="col-auto d-none d-lg-block">
+            <img src="../../assets/market.webp" alt="">
+        </div>
+
+        <div class="col p-4 d-flex flex-column position-static review-background">
+            <div class="col"></div>
+           <!-- customer-reviews.component.html -->
+            <div class="customer-reviews-section">
+                <h3 class="d-inline-block mb-4">Parking Lot Maintenance</h3>
+                <p class="mb-auto">Maintain a professional appearance for your business with parking lot maintenance from Kings Highway Asphalt. We can fill cracks, do resurfacing, and more.</p> 
+                <button class="btn card-btn mt-5">Learn More</button>
+            </div>
+            <div class="col"></div>
+  
+        </div>
+
+        
+    </div>
+  
+  

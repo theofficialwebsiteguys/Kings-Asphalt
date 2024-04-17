@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { HeroComponent } from '../hero/hero.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HeroComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

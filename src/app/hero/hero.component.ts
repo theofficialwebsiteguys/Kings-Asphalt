@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FirebaseService } from '../firebase.service';
 
@@ -12,6 +12,9 @@ import { FirebaseService } from '../firebase.service';
 export class HeroComponent implements OnInit {
   isOpen: boolean = false;
   openingTime: string = '';
+
+  @Input() title: string = ''; // Input for title
+  @Input() imageUrl: string = ''; // Input for image URL
 
   ngOnInit() {
     this.updateStatus();

@@ -1,8 +1,8 @@
-<div class="text-center bg-image rounded-3 hero-image">
+<div class="text-center bg-image rounded-3 hero-image" [style.background-image]="'url(' + imageUrl + ')'">
     <div class="mask">
         <div class="d-flex justify-content-center align-items-center h-100">
             <div class="text-white">
-                <h1 class="mb-3">Exceptional Asphalt Paving Services</h1>
+                <h1 class="mb-3">{{ title }}</h1>
                 <p class="mb-3">Free Same-Day Estimate | 1-Year Residential Driveway Warranty | 15 Years of Experience
                 </p>
                 <a data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg" href="#!"
@@ -10,7 +10,7 @@
                 <p class="mb-3 openHours">
                     <span class="bold">Hours:</span>
                     <span class="status bold" [ngClass]="{ 'openStatus': isOpen, 'closedStatus': !isOpen }">{{ isOpen ?
-                        ' Open' : 'Closed' }}</span>
+                        ' Open' : ' Closed' }}</span>
                     <span>{{ openingTime }}</span>
                 </p>
             </div>

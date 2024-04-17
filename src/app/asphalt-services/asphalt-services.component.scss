@@ -1,0 +1,72 @@
+/* your-component.component.css */
+.container {
+    font-family: Arial, sans-serif; /* Use a similar font to the one in the image */
+  }
+  
+  .card {
+    /* Custom card styles to match the image provided */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .btn-primary {
+    background-color: #563d7c; /* Assuming a purple color for the button based on Bootstrap's primary class */
+  }
+  
+
+  .service-content{
+    margin: 40px;
+  }
+
+  .warranty{
+    height: 400px;
+    width: 80%;
+    margin: auto;
+    background-color: rgba(236,240,241,1) !important;
+  }
+
+  .nav-item{
+    cursor: pointer;
+    color: #563d7c77;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .nav-item
+
+/* your-component.component.css */
+.list-unstyled {
+    list-style-type: disc;
+    padding-left: 20px; /* Adjust as needed for your design */
+    column-gap: 20px; /* Adjust the gap between columns */
+  }
+  
+  /* Apply two columns if there are more than four items */
+  ul.list-unstyled.multi-column {
+    list-style-type: disc;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+  
+
+  .icon{
+    font-size: 72px;
+    margin-bottom: 20px;
+    color: rgba(123,71,151,1);
+  }
+
+  .card-title{
+    font-weight: bold;
+  }
+
+  .warranty-number{
+    font-size: 28px;
+    font-weight: bold;
+    color: rgba(123,71,151,1);
+  }
+
+  .section-title{
+    font-weight: bold;
+    font-size: 24px;
+  }

@@ -1,25 +1,75 @@
-<div class="text-center bg-image rounded-3 hero-image">
-    <div class="mask">
-        <div class="d-flex justify-content-center align-items-center h-100">
-            <div class="text-white">
-                <h1 class="mb-3">Asphalt Paving Contrcator</h1>
-                <p class="mb-3">Free Same-Day Estimate | 1-Year Residential Driveway Warranty | 15 Years of Experience
-                </p>
-                <a data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg" href="#!"
-                    role="button">(914) 228-1500</a>
-                <p class="mb-3 openHours">
-                    <span class="bold">Hours:</span>
-                    <span class="status bold" [ngClass]="{ 'openStatus': isOpen, 'closedStatus': !isOpen }">{{ isOpen ?
-                        ' Open' : 'Closed' }}</span>
-                    <span>{{ openingTime }}</span>
-                </p>
+<app-hero [title]="services[currentService].name" [imageUrl]="services[currentService].image"></app-hero>
+
+<div class="container mt-5">
+    <!-- TABS CONTAINER -->
+
+    <div class="nav nav-tabs d-flex" id="nav-tab" role="tablist">
+        <a class="nav-item nav-link"
+           *ngFor="let service of services; let i = index"
+           [class.active]="currentService === i"
+           (click)="setCurrentService(i)"
+           [style.flex]="1">
+          {{ service.name }}
+        </a>
+      </div>
+    <!-- <div class="nav nav-tabs d-flex" id="nav-tab" role="tablist">
+      <a class="w-100 nav-item nav-link" (click)="currentService = 0" style="flex: 1">
+        Asphalt Paving Contractor
+      </a>
+      <a class="w-100 nav-item nav-link" (click)="currentService = 1"  style="flex: 1">
+        Driveway Paving
+      </a>
+      <a class="w-100 nav-item nav-link" (click)="currentService = 2" style="flex: 1">
+        Driveway Resurfacing
+      </a>
+      <a class="w-100 nav-item nav-link" (click)="currentService = 3"  style="flex: 1">
+        Parking Lot Paving
+      </a>
+      <a class="w-100 nav-item nav-link" (click)="currentService = 4" style="flex: 1">
+        Commercial Paving
+      </a>
+      <a class="w-100 nav-item nav-link" (click)="currentService = 5" style="flex: 1">
+        Parking Lot Maintenance
+      </a>
+      <a class="w-100 nav-item nav-link" (click)="currentService = 6" style="flex: 1">
+        Line Striping
+      </a>
+    </div> -->
+    <!-- Router outlet -->
+
+        <div class="container">
+            <div class="row service-content">
+              <!-- Left Column -->
+              <div class="col-md-8">
+                <div *ngFor="let section of services[currentService].sections" class="col-12">
+                    <!-- Section Title -->
+                    <h3 class="section-title">{{ section.title }}</h3>
+                    <!-- Section Description -->
+                    <ng-container *ngIf="section.description && section.description.length">
+                        <p *ngFor="let description of section.description">
+                            {{ description }}<br></p>
+                    </ng-container>
+                    
+                    <!-- Bullet Points -->
+                    <ul *ngIf="section.bullets && section.bullets.length" [class]="section.bullets.length > 4 ? 'list-unstyled multi-column' : 'list-styled'">
+                        <li *ngFor="let bullet of section.bullets">{{ bullet }}</li>
+                      </ul>
+                      
+                  </div>
+              </div>
+              <!-- Right Column -->
+              <div class="col-md-4">
+                <div class="card warranty">
+                  <div class="card-body text-center">
+                    <i class="fa-solid fa-shield-halved icon"></i>
+                    <h4 class="card-title">1-Year Warranty</h4>
+                    <p class="card-text">{{services[currentService].name}}</p>
+                    <p class="card-text">Call us today</p>
+                    <p class="warranty-number">(914) 228-1500</p>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-    </div>
-    <nav class="nav nav-pills nav-justified">
-        <a class="nav-link active" aria-current="page" href="#">Active</a>
-        <a class="nav-link" href="#">Much longer nav link</a>
-        <a class="nav-link" href="#">Link</a>
-        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-    </nav>
-</div>
+          </div>
+          
+  </div>

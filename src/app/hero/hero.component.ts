@@ -11,6 +11,7 @@ import { FirebaseService } from '../firebase.service';
 })
 export class HeroComponent implements OnInit {
   isOpen: boolean = false;
+  isClosingSoon: boolean = false;
   openingTime: string = '';
 
   ngOnInit() {
@@ -25,11 +26,18 @@ export class HeroComponent implements OnInit {
     const openingHour = 7; // 7:00 AM
     const closingHour = 22; // 10:00 PM
 
-    if (currentHour >= openingHour && currentHour < closingHour) {
+    if (currentHour >= openingHour && currentHour < closingHour && currentHour <= closingHour - 2) {
       this.isOpen = true;
-      this.openingTime = ` • Closes ${closingHour-12}:00 PM`;
-    } else {
+      this.isClosingSoon = false;
+      this.openingTime = ` • Closes ${closingHour - 12}:00 PM`;
+    } else if (currentHour >= openingHour && currentHour < closingHour) {
+      this.isClosingSoon = true;
       this.isOpen = false;
+      this.openingTime = ` • Closing Soon ${closingHour - 12}:00 PM`;
+    }
+    else {
+      this.isOpen = false;
+      this.isClosingSoon = false;
       this.openingTime = ` • Opens at ${openingHour}:00 AM`;
     }
   }

@@ -1,73 +1,73 @@
-.content-header{
-    font-size: 30px;
+.content-header {
+  font-size: 30px;
 }
 
-.cards{
-    width: 80%;
-    margin: auto;
+.cards {
+  width: 80%;
+  margin: auto;
 }
 
-.card-title{
-    font-size: 24px;
+.card-title {
+  font-size: 24px;
 }
 
-.card-btn{
-    background-color: #7b4797;
-    color: white;
-    border-radius: 2px;
+.card-btn {
+  background-color: #7b4797;
+  color: white;
+  border-radius: 2px;
 }
 
-.card-text{
-    height: 80px;
+.card-text {
+  height: 80px;
 }
 
 /* app-kings-highway-section.component.css */
 .kings-highway-section {
-    position: relative;
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .kings-highway-section img {
-    width: 100%;
-    display: block;
-  }
-  
-  .play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #000;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    padding: 10px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .play-button span {
-    margin-left: 8px;
-  }
-  
+  position: relative;
+  max-width: 100%;
+  height: auto;
+}
 
-  .video-container{
-    margin: 100px;
-    width: auto;
-  }
-  
+.kings-highway-section img {
+  width: 100%;
+  display: block;
+}
 
-  .customer-reviews-section{
-    margin: 30px;
-  }
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .star{
-    color: #ffc834;
-  }
+.play-button span {
+  margin-left: 8px;
+}
 
-  .review-background{
-    background-color: rgba(141, 141, 141, 0.103)
-  }
+
+.video-container {
+  margin: 100px auto 100px auto;
+  width: 65%;
+}
+
+
+.customer-reviews-section {
+  margin: 30px;
+}
+
+.star {
+  color: #ffc834;
+}
+
+.review-background {
+  background-color: rgba(141, 141, 141, 0.103)
+}

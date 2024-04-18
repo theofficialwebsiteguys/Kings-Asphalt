@@ -74,3 +74,60 @@
 .links {
     text-decoration: none;
 }
+
+.float-container {
+    /* height: 100px; */
+    height: auto;
+    /* Change this to auto for dynamic height */
+    width: 50px;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000000;
+}
+
+.hover-div {
+    width: 100%;
+    transition: width 0.3s;
+    height: 29px;
+    background-color: #7b4797;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    border-radius: 1px;
+}
+
+.hover-div span {
+    width: 200px;
+    transition: width 0.3s;
+    line-height: 0;
+}
+
+.hover-div:hover span {
+    width: 300px;
+}
+
+span {
+    text-align-last: left;
+    width: 50px;
+    padding-right: 19px;
+    padding-left: 19px;
+
+}
+
+.hover-div:hover {
+    width: 300px;
+    /* Set this to the expanded width */
+
+}
+
+.icons {
+    background-color: #7b4797;
+    color: white;
+}

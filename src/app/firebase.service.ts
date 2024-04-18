@@ -2,6 +2,7 @@
 import { Injectable } from '@angular/core';
 import { initializeApp } from 'firebase/app';
 import { getAnalytics } from 'firebase/analytics';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class FirebaseService {
   private app: any;
   private analytics: any;
 
-  constructor() {
+  constructor(private http: HttpClient) {
     // Your web app's Firebase configuration
     const firebaseConfig = {
       apiKey: "AIzaSyCrwBQRsK946myNLO4CRTdpWhQOaxQHbUY",
@@ -26,4 +27,20 @@ export class FirebaseService {
     this.app = initializeApp(firebaseConfig);
     this.analytics = getAnalytics(this.app);
   }
+
+  sendEmail() {
+    const functionUrl = 'https://us-central1-kings-asphalt.cloudfunctions.net/sendEmail'; // Update this URL with your actual Cloud Function URL
+
+    const body = {
+      "data": {
+          "aString": "some string",
+          "anInt": 57,
+          "aFloat": 1.23
+      }
+  }
+    return this.http.post(functionUrl, body);
+  }
+
+  
+
 }

@@ -1,5 +1,5 @@
 <header
-    class="bar sticky-top flex-wrap align-items-center justify-content-center justify-content-md-between mb-4 border-bottom">
+    class="bar sticky-top flex-wrap align-items-center justify-content-center justify-content-md-between border-bottom">
 
 
     <div class="request-bar-container row">
@@ -27,25 +27,13 @@
         </div>
     </div>
 
-
-
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
     <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
     <li><a (click)="route('asphalt-services')" class="nav-link px-2 link-secondary">Asphalt Services</a></li>
-    <li class="nav-item dropdown">
-        <a class="nav-link link-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Hardscaping Services
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Patios</a></li>
-            <li><a class="dropdown-item" href="#">Retaining Walls</a></li>
-            <li><a class="dropdown-item" href="#">Walkways & Steps</a></li>
-            <li><a class="dropdown-item" href="#">Masonry</a></li>
-        </ul>
-    </li>
-    <li><a href="#" class="nav-link px-2 link-dark">Seal Coating</a></li>
-    <li><a href="#" class="nav-link px-2 link-dark">Gallery</a></li>
-    <li><a href="#" class="nav-link px-2 link-dark">Reviews</a></li>
+    <li><a (click)="route('hardscaping-services')" class="nav-link px-2 link-secondary">Hardscaping Services</a></li>
+    <li><a (click)="route('sealcoating')" class="nav-link px-2 link-dark">Seal Coating</a></li>
+    <li><a (click)="route('gallery')" class="nav-link px-2 link-dark">Gallery</a></li>
+    <li><a (click)="route('reviews')" class="nav-link px-2 link-dark">Reviews</a></li>
     <li class="nav-item dropdown">
         <a class="nav-link link-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             About

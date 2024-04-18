@@ -30,32 +30,34 @@
 
 
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-    <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-    <li><a (click)="route('asphalt-services')" class="nav-link px-2 link-secondary">Asphalt Services</a></li>
-    <li class="nav-item dropdown">
-        <a class="nav-link link-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Hardscaping Services
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Patios</a></li>
-            <li><a class="dropdown-item" href="#">Retaining Walls</a></li>
-            <li><a class="dropdown-item" href="#">Walkways & Steps</a></li>
-            <li><a class="dropdown-item" href="#">Masonry</a></li>
-        </ul>
-    </li>
-    <li><a href="#" class="nav-link px-2 link-dark">Seal Coating</a></li>
-    <li><a href="#" class="nav-link px-2 link-dark">Gallery</a></li>
-    <li><a href="#" class="nav-link px-2 link-dark">Reviews</a></li>
-    <li class="nav-item dropdown">
-        <a class="nav-link link-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            About
-        </a>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Blog</a></li>
-            <li><a class="dropdown-item" href="#">FAQs</a></li>
-        </ul>
-    </li>
-    <li><a href="#" class="nav-link px-2 link-dark">Contact</a></li>
+        <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+        <li><a (click)="route('asphalt-services')" class="nav-link px-2 link-secondary">Asphalt Services</a></li>
+        <li class="nav-item dropdown">
+            <a class="nav-link link-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Hardscaping Services
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Patios</a></li>
+                <li><a class="dropdown-item" href="#">Retaining Walls</a></li>
+                <li><a class="dropdown-item" href="#">Walkways & Steps</a></li>
+                <li><a class="dropdown-item" href="#">Masonry</a></li>
+            </ul>
+        </li>
+        <li><a href="#" class="nav-link px-2 link-dark">Seal Coating</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Gallery</a></li>
+        <li><a href="#" class="nav-link px-2 link-dark">Reviews</a></li>
+        <li class="nav-item dropdown">
+            <a class="nav-link link-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                About
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Blog</a></li>
+                <li><a class="dropdown-item" href="#">FAQs</a></li>
+            </ul>
+        </li>
+        <li><a href="#" class="nav-link px-2 link-dark">Contact</a></li>
 
     </ul>
     <div class="logo-container row">
@@ -70,3 +72,17 @@
 
 
 </header>
+<div class="float-container">
+    <div class="hover-div" (click)="toggleActive(1)" [ngClass]="{ 'active': isActive[1] }">
+        <span class="icons"><i class="bi bi-star-fill"></i></span> <span id="messanger">Read Reviews</span>
+    </div>
+    <div class="hover-div" (click)="toggleActive(2)" [ngClass]="{ 'active': isActive[2] }">
+        <span class="icons"><i class="bi bi-messenger"></i></span> <span id="messanger">Message Us</span>
+    </div>
+    <div class="hover-div" (click)="toggleActive(3)" [ngClass]="{ 'active': isActive[3] }">
+        <span class="icons"><i class="bi bi-envelope"></i></span> <span id="messanger">Email Us</span>
+    </div>
+    <div class="hover-div" (click)="toggleActive(4)" [ngClass]="{ 'active': isActive[4] }">
+        <span class="icons"><i class="bi bi-share-fill"></i> </span> <span id="messanger">Share Us</span>
+    </div>
+</div>

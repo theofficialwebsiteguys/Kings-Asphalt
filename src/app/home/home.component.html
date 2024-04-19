@@ -1,4 +1,25 @@
-<app-hero title="Exceptional Asphalt Paving Services" imageUrl="../../assets/hero-image.webp"></app-hero>
+<!-- <app-hero title="Exceptional Asphalt Paving Services" imageUrl="../../assets/hero-image.webp"></app-hero> -->
+
+<div class="text-center bg-image rounded-3 hero-image" style.background-image="../../assets/hero-image.webp">
+  <div class="mask">
+      <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white">
+              <h1 class="mb-3">Exceptional Asphalt Paving Services</h1>
+              <p class="mb-3">Free Same-Day Estimate | 1-Year Residential Driveway Warranty | 15 Years of Experience
+              </p>
+              <a data-mdb-button-init data-mdb-ripple-init class="btn btn-outline-light btn-lg" href="#!"
+                  role="button">(914) 228-1500</a>
+              <p class="mb-3 openHours">
+                  <span class="bold">Hours:</span>
+                  <span class="status bold"
+                      [ngClass]="{ 'openStatus': isOpen, 'closedStatus': !isOpen, 'closingSoonStatus' : isClosingSoon}">{{isOpen
+                      ?' Open' : isClosingSoon ? ' Closing soon' : ' Closed' }}</span>
+                  <span class="bold">{{ openingTime }}</span>
+              </p>
+          </div>
+      </div>
+  </div>
+</div>
 
 <div class="px-4 pt-5 mb-5 text-center">
     <h1 class="display-4 fw-bold content-header">Full-Service Asphalt Paving Company Westchester County, NY & Rockland County, NY</h1>

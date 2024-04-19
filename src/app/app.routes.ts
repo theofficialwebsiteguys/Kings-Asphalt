@@ -6,6 +6,8 @@ import { HardscapingServicesComponent } from './hardscaping-services/hardscaping
 import { SealcoatingComponent } from './sealcoating/sealcoating.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
 
 export const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -14,6 +16,8 @@ export const routes: Routes = [
     { path: 'sealcoating', component: SealcoatingComponent },
     { path: 'gallery', component: GalleryComponent },
     { path: 'reviews', component: ReviewsComponent },
+    { path: 'contact', component: ContactComponent },
+    { path: 'about', component: AboutComponent },
     { path: 'estimate', component: EstimateComponent },
     { path: '', redirectTo: '/home', pathMatch: 'full' }, // Redirect to /home
     { path: '**', redirectTo: '/home' } // Wildcard route for a 404 page, redirected to /home

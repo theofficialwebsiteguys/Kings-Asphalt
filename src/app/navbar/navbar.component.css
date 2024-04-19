@@ -131,3 +131,12 @@ span {
     background-color: #7b4797;
     color: white;
 }
+
+.nav-link{
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: black;      /* Changes the text color to black */
+    font-weight: bold; /* Makes the text bold */
+}

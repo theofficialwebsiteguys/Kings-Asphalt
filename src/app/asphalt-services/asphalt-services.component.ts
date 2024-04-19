@@ -41,7 +41,7 @@ export class AsphaltServicesComponent implements OnInit {
     {
       index: 0,
       name: 'Asphalt Paving Contractor',
-      image: '../../assets/asphalt-services.webp',
+      image: 'assets/asphalt-services.webp',
       sections: [
         {
           title: 'Don\'t Ignore Your Driveway and Other Asphalt Areas',
@@ -69,7 +69,7 @@ export class AsphaltServicesComponent implements OnInit {
     {
       index: 1,
       name: 'Driveway Paving',
-      image: '../../assets/driveway-paving.webp',
+      image: 'assets/driveway-paving.webp',
       sections: [
         {
           title: 'Is Your Driveway an Eyesore?',
@@ -95,7 +95,7 @@ export class AsphaltServicesComponent implements OnInit {
     {
       index: 2,
       name: 'Driveway Resurfacing',
-      image: '../../assets/driveway-resurfacing.webp',
+      image: 'assets/driveway-resurfacing.webp',
       sections: [
         {
           title: 'Affordable Driveway Resurfacing',
@@ -118,7 +118,7 @@ export class AsphaltServicesComponent implements OnInit {
     {
       index: 3,
       name: 'Parking Lot Paving',
-      image: '../../assets/parking-lot-paving.webp',
+      image: 'assets/parking-lot-paving.webp',
       sections: [
         {
           title: 'Parking Lot Paving for Rockland County, NY & Westchester County, NY',
@@ -160,7 +160,7 @@ export class AsphaltServicesComponent implements OnInit {
     {
       index: 4,
       name: 'Commercial Paving',
-      image: '../../assets/commercial-paving.webp',
+      image: 'assets/commercial-paving.webp',
       sections: [
         {
           title: 'Get Your Parking Lot Back Today',
@@ -197,7 +197,7 @@ export class AsphaltServicesComponent implements OnInit {
     {
       index: 5,
       name: 'Parking Lot Maintenance',
-      image: '../../assets/parking.webp',
+      image: 'assets/parking.webp',
       sections: [
         {
           title: 'Safe Parking Lots',
@@ -227,7 +227,7 @@ export class AsphaltServicesComponent implements OnInit {
     {
       index: 6,
       name: 'Line Striping',
-      image: '../../assets/line-striping.webp',
+      image: 'assets/line-striping.webp',
       sections: [
         {
           title: 'Parking Lot Striping in Westchester County, NY',

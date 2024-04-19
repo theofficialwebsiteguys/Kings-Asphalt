@@ -160,6 +160,15 @@ span {
     color: white;
 }
 
+.nav-link{
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: black;      /* Changes the text color to black */
+    font-weight: bold; /* Makes the text bold */
+}
+
 .share-panel {
     position: fixed;
     top: 50%;

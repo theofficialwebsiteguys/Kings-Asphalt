@@ -16,6 +16,7 @@ export class HeroComponent implements OnInit {
 
   @Input() title: string = ''; // Input for title
   @Input() imageUrl: string = ''; // Input for image URL
+  @Input() width: number = 400; // Input for image URL
 
   ngOnInit() {
     this.updateStatus();

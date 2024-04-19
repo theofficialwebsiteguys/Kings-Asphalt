@@ -1,0 +1,64 @@
+<app-hero title="About Kings Highway Asphalt" imageUrl="../../assets/about.webp"></app-hero>
+
+<div class="container py-5">
+    <div class="row">
+      <!-- About Us Section -->
+      <div class="col-md-6">
+        <h3>About Us</h3>
+        <p>Kings Highway Asphalt provides asphalt services to the Westchester County, NY and surrounding areas.</p>
+        <h4>Year Established</h4>
+        <p>2012</p>
+        <h4>Services</h4>
+        <ul>
+          <li>Driveway Paving</li>
+          <li>Masonry</li>
+          <li>Parking Lot Maintenance</li>
+        </ul>
+        <h4>Specialties</h4>
+        <ul>
+          <li>Paving</li>
+        </ul>
+        <h4>Languages</h4>
+        <ul>
+          <li>English</li>
+        </ul>
+      </div>
+      
+      <!-- Business Hours and Payment Types Section -->
+      <div class="col-md-6">
+        <h3>Business Hours</h3>
+        <p>Mon - Sun 7:00 am - 10:00 pm</p>
+        <h4>Payment Types</h4>
+        <ul>
+          <li>American Express</li>
+          <li>Cash</li>
+          <li>Check</li>
+          <li>Discover</li>
+          <li>Google Pay</li>
+          <li>MasterCard</li>
+          <li>Visa</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container my-5">
+    <h2>Learn More About Kings Highway Asphalt</h2>
+    <p>Have an asphalt-related question? We have the answer. Check out these FAQs and give us a call today for more information!</p>
+    
+    <div *ngFor="let faq of faqs; let i = index">
+      <div class="card">
+        <div class="card-header" (click)="toggle(i)">
+          <h5 class="mb-0">{{ faq.question }}</h5>
+        </div>
+        <div [hidden]="!faq.open" class="card-body">
+          <p>{{ faq.answer }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  
+  

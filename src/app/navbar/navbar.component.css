@@ -93,7 +93,7 @@
 
 .hover-div {
     width: 100%;
-    transition: width 0.3s;
+    transition: width 1s;
     height: 29px;
     background-color: #7b4797;
     color: rgb(255, 255, 255);
@@ -105,7 +105,7 @@
 
 .hover-div span {
     width: 200px;
-    transition: width 0.3s;
+    transition: width 1s;
     line-height: 0;
 }
 
@@ -127,7 +127,85 @@ span {
 
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adjust the alpha value to change darkness */
+    z-index: 999999999;
+    /* Ensure the overlay is above other content */
+    display: none;
+    /* Hide the overlay by default */
+}
+
+.overlay.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
 .icons {
     background-color: #7b4797;
     color: white;
+}
+
+.share-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #808080;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000000000000000;
+    max-width: 300px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.share-panel.active {
+    /* Adjust opacity to make it visible */
+    opacity: 1;
+}
+
+.platform {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    color: white;
+    background-color: #808080;
+}
+
+.platform:last-child {
+    border-bottom: none;
+}
+
+.platform:hover {
+    background-color: #4f4f4f;
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #bebebe;
+}
+
+.close-btn:hover {
+    color: #333;
 }

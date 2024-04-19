@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
@@ -29,6 +29,8 @@ export class NavbarComponent {
     4: false
   };
 
+  showSharePanel = false;
+
   toggleActive(divNumber: number) {
     switch (divNumber) {
       case 1:
@@ -45,10 +47,59 @@ export class NavbarComponent {
         break;
       case 4:
         // Redirect to the URL for sharing
-        window.open('https://www.addtoany.com/share', '_blank');
+        this.toggleSharePanel()
         break;
       default:
         break;
     }
   }
+
+  toggleSharePanel(event?: MouseEvent) {
+    this.showSharePanel = !this.showSharePanel;
+    if (this.showSharePanel) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    if (event) {
+      event.stopPropagation(); // Prevent event from bubbling up and triggering the overlay click event
+    }
+  }
+
+  shareOnFacebook() {
+    const shareUrl = 'https://example.com'; // Replace with your website URL
+    const facebookUrl = `https://www.facebook.com/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+    window.open(facebookUrl, 'facebook-share', 'width=600,height=400');
+  }
+
+  shareOnTwitter() {
+    const shareUrl = 'https://example.com'; // Replace with your website URL
+    const title = 'Check out this website!';
+    const twitterUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(title)}`;
+    window.open(twitterUrl, 'twitter-share', 'width=600,height=400');
+  }
+
+  shareOnLinkedIn() {
+    const shareUrl = 'https://example.com'; // Replace with your website URL
+    const title = 'Check out this website!';
+    const linkedinUrl = `https://www.linkedin.com/shareArticle?url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent(title)}`;
+    window.open(linkedinUrl, 'linkedin-share', 'width=600,height=400');
+  }
+  shareOnReddit() {
+    const shareUrl = 'https://example.com'; // Replace with your website URL
+    const title = 'Check out this website!';
+    const redditUrl = `https://www.reddit.com/submit?url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent(title)}`;
+    window.open(redditUrl, 'reddit-share', 'width=600,height=400');
+  }
+  shareOnEmail() {
+    const shareUrl = 'https://example.com'; // Replace with your website URL
+    const subject = 'Check out this website!';
+    const body = 'I found this website and thought you might be interested. Check it out!';
+    const emailUrl = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(emailUrl);
+  }
+
+
+
 }
+

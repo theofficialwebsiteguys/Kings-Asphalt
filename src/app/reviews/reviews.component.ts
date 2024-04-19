@@ -93,4 +93,17 @@ export class ReviewsComponent {
       stars: 5
     }
   ]
+
+  displayedReviews!: any[];
+  showAllReviews: boolean = false;
+
+  ngOnInit() {
+    this.displayedReviews = this.reviews.slice(0, 10); // Show first 10 reviews initially
+  }
+
+  toggleReviews() {
+    this.showAllReviews = !this.showAllReviews;
+    this.displayedReviews = this.showAllReviews ? this.reviews : this.reviews.slice(0, 10);
+  }
+
 }

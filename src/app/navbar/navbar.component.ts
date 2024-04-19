@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
@@ -14,13 +14,23 @@ interface IsActiveMap {
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+  private lastScrollTop = 0;
+  private isHeaderHidden = false;
+  private navbarHeight: number;
+  private scrollOffset = 100; // Additional scroll offset in pixels
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private renderer: Renderer2, private el: ElementRef) {
+    this.navbarHeight = 0;
+   }
 
+   ngAfterViewInit() {
+    this.navbarHeight = this.el.nativeElement.querySelector('.bar').offsetHeight;
+  }
 
   route(page: string) {
     this.router.navigate(['/' + page]);
   }
+  
 
   isActive: IsActiveMap = {
     1: false,
@@ -35,7 +45,7 @@ export class NavbarComponent {
     switch (divNumber) {
       case 1:
         // Redirect to the URL for reading reviews
-        window.location.href = 'https://example.com/reviews';
+        this.router.navigateByUrl('/reviews');
         break;
       case 2:
         // Redirect to the URL for messaging
@@ -100,6 +110,27 @@ export class NavbarComponent {
   }
 
 
+  @HostListener("window:scroll", [])
+  onWindowScroll() {
+    let currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScrollTop > this.lastScrollTop) {
+      // Scrolling down
+      if (currentScrollTop > this.lastScrollTop && currentScrollTop > (this.navbarHeight + this.scrollOffset)){
+        this.renderer.addClass(this.el.nativeElement.querySelector('.bar'), 'header-hidden');
+        this.isHeaderHidden = true;
+      }
+    } else {
+      // Scrolling up
+      if (this.isHeaderHidden) {
+        this.renderer.removeClass(this.el.nativeElement.querySelector('.bar'), 'header-hidden');
+        this.isHeaderHidden = false;
+      }
+    }
+
+    // Update lastScrollTop but not before checking the direction
+    this.lastScrollTop = currentScrollTop;
+  }
 
 }
 

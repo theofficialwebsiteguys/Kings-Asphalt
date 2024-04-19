@@ -84,3 +84,27 @@
         <span class="icons"><i class="bi bi-share-fill"></i> </span> <span id="messanger">Share Us</span>
     </div>
 </div>
+
+<div class="float-container">
+    <div class="hover-div" (click)="toggleActive(1)" [ngClass]="{ 'active': isActive[1] }">
+        <span class="icons"><i class="bi bi-star-fill"></i></span> <span id="messanger">Read Reviews</span>
+    </div>
+    <div class="hover-div" (click)="toggleActive(2)" [ngClass]="{ 'active': isActive[2] }">
+        <span class="icons"><i class="bi bi-messenger"></i></span> <span id="messanger">Message Us</span>
+    </div>
+    <div class="hover-div" (click)="toggleActive(3)" [ngClass]="{ 'active': isActive[3] }">
+        <span class="icons"><i class="bi bi-envelope"></i></span> <span id="messanger">Email Us</span>
+    </div>
+    <div class="hover-div" (click)="toggleSharePanel()">
+        <span class="icons"><i class="bi bi-share-fill"></i> </span> <span id="messanger">Share Us</span>
+    </div>
+</div>
+<div class="overlay" [ngClass]="{ 'active': showSharePanel }" (click)="toggleSharePanel($event)"></div>
+<div class="share-panel" [ngClass]="{ 'active': showSharePanel }">
+    <div class="close-btn" (click)="toggleSharePanel($event)">&times;</div>
+    <div class="platform" (click)="shareOnFacebook()"><i class="bi bi-facebook"></i></div>
+    <div class="platform" (click)="shareOnTwitter()"><i class="bi bi-twitter"></i></div>
+    <div class="platform" (click)="shareOnLinkedIn()"><i class="bi bi-linkedin"></i></div>
+    <div class="platform" (click)="shareOnReddit()"><i class="bi bi-reddit"></i></div>
+    <div class="platform" (click)="shareOnEmail()"><i class="bi bi-envelope"></i></div>
+</div>

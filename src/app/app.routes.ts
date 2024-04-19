@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { AsphaltServicesComponent } from './asphalt-services/asphalt-services.component';
 import { HomeComponent } from './home/home.component';
 import { EstimateComponent } from './estimate/estimate.component';
@@ -8,6 +8,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
+import { NgModule } from '@angular/core';
 
 export const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -22,3 +23,4 @@ export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' }, // Redirect to /home
     { path: '**', redirectTo: '/home' } // Wildcard route for a 404 page, redirected to /home
     ];
+

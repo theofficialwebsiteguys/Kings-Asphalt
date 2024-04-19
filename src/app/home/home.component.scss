@@ -115,3 +115,10 @@
   font-weight: bold;
 
 }
+
+/* CSS */
+@media (max-width: 576px) { /* Adjust for Bootstrap's small breakpoint */
+  .video-container {
+    width: 100% !important; /* Ensures full width on small devices */
+  }
+}

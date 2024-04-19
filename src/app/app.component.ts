@@ -39,4 +39,6 @@ export class AppComponent {
   // Initialize Firebase
   app = initializeApp(this.firebaseConfig);
   analytics = getAnalytics(this.app);
+
+  
 }

@@ -47,7 +47,7 @@
 }
 
 .dmform input[type="submit"] {
-    background-color: #4CAF50;
+    background-color: rgba(123, 71, 151, 1);
     color: white;
     padding: 12px 20px;
     border: none;
@@ -58,7 +58,7 @@
 }
 
 .dmform input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: rgb(104, 60, 128);
 }
 
 /* Success and error message styles (optional) */

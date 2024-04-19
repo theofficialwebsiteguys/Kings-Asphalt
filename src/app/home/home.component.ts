@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { HeroComponent } from '../hero/hero.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -31,7 +32,11 @@ export class HomeComponent {
     }
   ];
 
-  constructor() { }
+  constructor(private router: Router) { }
+
+  route(page: string) {
+    this.router.navigate(['/' + page]);
+  }
 
   setupInitialFrame(): void {
     const video = this.videoPlayer.nativeElement;

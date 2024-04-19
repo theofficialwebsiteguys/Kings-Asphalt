@@ -17,6 +17,8 @@ export class HomeComponent {
   isClosingSoon: boolean = false;
   openingTime: string = '';
 
+  imageUrl: string = 'assets/hero-image.webp'
+
   reviews = [
     {
       name: 'Beverly K',

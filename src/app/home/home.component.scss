@@ -83,8 +83,7 @@
 
 .btn {
   border: none;
-  font-size: 30px;
-  font-weight: bold;
+  font-size: 24px;
 }
 
 .openStatus {
@@ -116,9 +115,22 @@
 
 }
 
+.hero-number{
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.bbb{
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+}
+
 /* CSS */
 @media (max-width: 576px) { /* Adjust for Bootstrap's small breakpoint */
   .video-container {
     width: 100% !important; /* Ensures full width on small devices */
   }
 }
+

@@ -261,3 +261,14 @@ span {
   .social-text{
     font-size: 20px;
   }
+
+
+  /* Assuming .overlay and .share-panel are your modal elements */
+.overlay, .share-panel {
+    pointer-events: none;  /* Ensures that when hidden, elements cannot be interacted with */
+    transition: all 0.3s;  /* Optional: for smooth transitions */
+}
+
+.overlay.active, .share-panel.active {
+    pointer-events: auto;  /* Allows clicking when the modal is active */
+}

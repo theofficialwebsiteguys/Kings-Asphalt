@@ -30,6 +30,7 @@ export class NavbarComponent {
   route(page: string) {
     this.router.navigate(['/' + page]);
   }
+  
 
   isActive: IsActiveMap = {
     1: false,
@@ -44,7 +45,7 @@ export class NavbarComponent {
     switch (divNumber) {
       case 1:
         // Redirect to the URL for reading reviews
-        window.location.href = 'https://example.com/reviews';
+        this.router.navigateByUrl('/reviews');
         break;
       case 2:
         // Redirect to the URL for messaging

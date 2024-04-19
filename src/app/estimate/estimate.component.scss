@@ -105,3 +105,57 @@ select {
     border-color: rgba(123, 71, 151, 1) !important;
     background-color: rgba(236, 240, 241, 1)
 }
+
+
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 576px) {
+    .email-phone-services,
+    .city-state {
+        flex-direction: column;
+    }
+
+    .allThree,
+    .both {
+        padding-left: 0;
+        width: 100%; /* Ensures that each field takes the full width */
+    }
+}
+
+
+
+.dmform input[type="text"],
+.dmform input[type="email"],
+.dmform input[type="tel"],
+.dmform select,
+.dmform textarea {
+    width: 100%;
+    /* Rest of the styles */
+}
+
+
+@media (max-width: 768px) {
+    .dmRespColsWrapper {
+        max-width: 90%; /* Slightly more width for smaller screens */
+    }
+}
+
+
+@media (max-width: 576px) {
+    .dmform {
+        padding: 15px; /* Less padding on smaller screens */
+    }
+}
+
+
+@media (max-width: 576px) {
+    .dmform input[type="text"],
+    .dmform input[type="email"],
+    .dmform input[type="tel"],
+    .dmform select,
+    .dmform textarea {
+        padding: 12px; /* Larger padding for easier interaction */
+        font-size: 16px; /* Larger font size for readability */
+    }
+}

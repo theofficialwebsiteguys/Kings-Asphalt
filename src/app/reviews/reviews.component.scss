@@ -29,6 +29,13 @@
 .restaurant-detailed-ratings-and-reviews hr {
     margin: 0 -24px;
 }
+
+.graph-star-rating{
+    width: 60%;
+    margin: auto;
+    padding: 50px;
+}
+
 .graph-star-rating-header .star-rating {
     font-size: 17px;
 }
@@ -86,4 +93,23 @@
 .reviews-members{
     max-width: 1000px;
     margin: auto;
+    padding: 100px;
+}
+
+.btn-container{
+    margin: auto;
+    width: 300px;
+    padding: 50px;
+}
+
+.card-btn {
+    background-color: #7b4797;
+    color: white;
+    border-radius: 2px;
+  }
+  
+  @media (max-width: 576px) {
+    .rating-list-left {
+        width: 40%;
+    }
 }

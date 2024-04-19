@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeroComponent } from './hero/hero.component';
 import { initializeApp } from "firebase/app";
@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireFunctionsModule } from '@angular/fire/compat/functions';
+import { filter } from 'rxjs';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -40,5 +41,15 @@ export class AppComponent {
   app = initializeApp(this.firebaseConfig);
   analytics = getAnalytics(this.app);
 
+  constructor(private router: Router) {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 0);
+      
+    });
+  }
   
 }

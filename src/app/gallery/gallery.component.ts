@@ -25,5 +25,15 @@ export class GalleryComponent {
     { src: '../../assets/gal12.webp', alt: 'Description of Image N' },
     { src: '../../assets/gal13.webp', alt: 'Description of Image N' },
     { src: '../../assets/gal14.webp', alt: 'Description of Image N' },
+    { src: '../../assets/gal15.webp', alt: 'Description of Image N' },
+    { src: '../../assets/gal16.webp', alt: 'Description of Image N' },
+    { src: '../../assets/gal17.webp', alt: 'Description of Image N' },
+    { src: '../../assets/gal18.webp', alt: 'Description of Image N' },
+    { src: '../../assets/gal19.webp', alt: 'Description of Image N' },
+    { src: '../../assets/gal20.webp', alt: 'Description of Image N' },
+    { src: '../../assets/gal21.webp', alt: 'Description of Image N' },
+    { src: '../../assets/gal22.webp', alt: 'Description of Image N' },
+    { src: '../../assets/gal23.webp', alt: 'Description of Image N' },
+    { src: '../../assets/gal24.webp', alt: 'Description of Image N' },
   ];
 }

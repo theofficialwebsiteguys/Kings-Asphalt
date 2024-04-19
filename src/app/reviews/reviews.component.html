@@ -1,6 +1,6 @@
 <app-hero title="Kings Highway Asphalt Customer Reviews" imageUrl="../../assets/roller2.webp"></app-hero>
 
-<div class="p-4 m-5 clearfix graph-star-rating">
+<div class="clearfix graph-star-rating">
     <h5 class="mb-0 mb-4">Ratings and Reviews</h5>
     <div class="graph-star-rating-header">
         <div class="star-rating">
@@ -63,17 +63,16 @@
     </div>
 </div>
 <div class="bg-white rounded shadow-sm p-4restaurant-detailed-ratings-and-reviews">
-    <div *ngFor="let review of reviews" class="reviews-members pt-4 pb-4">
+    <div *ngFor="let review of displayedReviews" class="reviews-members pt-4 pb-4">
         <div class="media">
-            <a href="#"><img alt="Generic placeholder image" src="http://bootdey.com/img/Content/avatar/avatar{{review.stars}}.png" class="mr-3 rounded-pill"></a>
+            <!-- <a href="#"><img alt="Generic placeholder image" src="http://bootdey.com/img/Content/avatar/avatar{{review.stars}}.png" class="mr-3 rounded-pill"></a> -->
             <div class="media-body">
                 <div class="reviews-members-header">
+                    <h6 class="mb-1"><a class="text-black" href="#">{{ review.name }}</a></h6>
                     <span class="star-rating float-right">
                         <a href="#" *ngFor="let star of [].constructor(review.stars); let i = index"><i class="fa-solid fa-star star"></i></a>
                         <a href="#" *ngFor="let star of [].constructor(5 - review.stars); let i = index"><i class="fa-solid fa-star star"></i></a>
                     </span>
-                    <h6 class="mb-1"><a class="text-black" href="#">{{ review.name }}</a></h6>
-                    <p class="text-gray">Review Date</p> <!-- You might want to add actual review dates if available -->
                 </div>
                 <div class="reviews-members-body">
                     <p>{{ review.review }}</p>
@@ -82,5 +81,9 @@
         </div>
         <hr>
     </div>
-    <a class="text-center w-100 d-block mt-4 font-weight-bold" href="#">See All Reviews</a>
+    <div class="btn-container">
+        <button *ngIf="!showAllReviews" type="button" class="mt-auto btn w-100 card-btn" (click)="toggleReviews()">Show More</button>
+        <button *ngIf="showAllReviews" type="button" class="mt-auto btn w-100 card-btn" (click)="toggleReviews()">Show Less</button>
+    </div>
+    
 </div>

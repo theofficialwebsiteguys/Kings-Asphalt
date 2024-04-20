@@ -1,6 +1,6 @@
-<!-- <app-hero title="Exceptional Asphalt Paving Services" imageUrl="../../assets/hero-image.webp"></app-hero> -->
+<!-- <app-hero title="Exceptional Asphalt Paving Services" imageUrl="assets/hero-image.webp"></app-hero> -->
 
-<div class="text-center bg-image rounded-3 hero-image" style.background-image="../../assets/hero-image.webp">
+<div class="text-center bg-image rounded-3 hero-image" [style.background-image]="'url(' + imageUrl + ')'">
   <div class="mask">
       <div class="d-flex justify-content-center align-items-center h-100">
           <div class="text-white m-5">
@@ -35,7 +35,7 @@
   <div class="row row-cols-1 row-cols-md-3 mb-3 text-center cards">
     <div class="col mb-4">
       <div class="card h-100">
-          <img src="../../assets/driveway-paving-small.webp" alt="" class="card-img-top">
+          <img src="assets/driveway-paving-small.webp" alt="" class="card-img-top">
           <div class="card-body d-flex flex-column">
               <h1 class="card-title pricing-card-title">Driveway Paving</h1>
               <p class="card-text">Get a 1-year residential driveway warranty from Kings Highway Asphalt. We're open seven days a week.</p>
@@ -45,7 +45,7 @@
   </div>
   <div class="col mb-4">
     <div class="card h-100">
-        <img src="../../assets/masonry-image.webp" alt="" class="card-img-top">
+        <img src="assets/masonry-image.webp" alt="" class="card-img-top">
         <div class="card-body d-flex flex-column">
             <h1 class="card-title pricing-card-title">Masonry</h1>
             <p class="card-text">Prevent accidents with masonry from Kings Highway Asphalt. We'll repair sidewalks, driveways, and more.</p>
@@ -55,7 +55,7 @@
 </div>
 <div class="col mb-4">
   <div class="card h-100">
-      <img src="../../assets/line-striping-image.webp" alt="" class="card-img-top">
+      <img src="assets/line-striping-image.webp" alt="" class="card-img-top">
       <div class="card-body d-flex flex-column">
           <h1 class="card-title pricing-card-title">Line Striping</h1>
           <p class="card-text">Revitalize your parking lot's appearance and safety with our precise and durable line striping services.</p>
@@ -66,13 +66,13 @@
   </div>
 
   <!-- <div class="ratio ratio-16x9 video-container">
-    <iframe src="../../assets/kings-highway-asphalt-video.mp4" title="YouTube video" allowfullscreen></iframe>
+    <iframe src="assets/kings-highway-asphalt-video.mp4" title="YouTube video" allowfullscreen></iframe>
   </div> -->
 
 <!-- video-player.component.html -->
 <div class="ratio ratio-16x9 video-container">
     <video #videoPlayer controls preload="metadata" (loadedmetadata)="setupInitialFrame()">
-      <source src="../../assets/kings-highway-asphalt-video.mp4" type="video/mp4">
+      <source src="assets/kings-highway-asphalt-video.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
@@ -107,14 +107,14 @@
         </div>
 
         <div class="col-auto d-none d-lg-block">
-            <img src="../../assets/roller2.webp" alt="">
+            <img src="assets/roller2.webp" alt="">
         </div>
     </div>
 
     <div class="row g-0 overflow-hidden flex-md-row mb-4 h-md-250 position-relative">
       
         <div class="col-auto d-none d-lg-block">
-            <img src="../../assets/market.webp" alt="">
+            <img src="assets/market.webp" alt="">
         </div>
 
         <div class="col p-4 d-flex flex-column position-static review-background">

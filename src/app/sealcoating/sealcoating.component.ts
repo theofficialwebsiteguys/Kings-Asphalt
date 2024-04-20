@@ -40,7 +40,7 @@ export class SealcoatingComponent {
     {
       index: 0,
       name: 'Seal Coating Services',
-      image: '../../assets/sealcoating.webp',
+      image: 'assets/sealcoating.webp',
       sections: [
         {
           title: 'Quality Service of Seal Coating',

@@ -41,7 +41,7 @@ export class HardscapingServicesComponent {
       index: 0,
       name: 'Patios',
       heroName: 'Patio Design and Installation Contractor',
-      image: '../../assets/patios.webp',
+      image: 'assets/patios.webp',
       sections: [
         {
           title: 'Enhance Your Landscape with a Beautiful Patio Hardscape in Westchester County, NY',
@@ -76,7 +76,7 @@ export class HardscapingServicesComponent {
       index: 1,
       name: 'Retaining Walls',
       heroName: 'Retaining Walls Contractor',
-      image: '../../assets/retaining-walls.webp',
+      image: 'assets/retaining-walls.webp',
       sections: [
         {
           title: 'Retaining Walls in Westchester County, NY ',
@@ -110,7 +110,7 @@ export class HardscapingServicesComponent {
       index: 2,
       name: 'Walkways & Steps',
       heroName: 'Stone Walkway and Steps Contractor',
-      image: '../../assets/walkways-steps.webp',
+      image: 'assets/walkways-steps.webp',
       sections: [
         {
           title: 'Paver Walkways in Westchester County, NY',
@@ -147,7 +147,7 @@ export class HardscapingServicesComponent {
       index: 3,
       name: 'Masonry',
       heroName: 'Masonry Work',
-      image: '../../assets/masonry-work.webp',
+      image: 'assets/masonry-work.webp',
       sections: [
         {
           title: 'Masonry Results',

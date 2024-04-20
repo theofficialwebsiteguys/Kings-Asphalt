@@ -192,6 +192,28 @@ span {
     opacity: 1;
 }
 
+.appt-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000000000000000;
+    max-width: 1000px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.appt-panel.active {
+    /* Adjust opacity to make it visible */
+    opacity: 1;
+}
+
+
 .platform {
     cursor: pointer;
     padding: 10px;
@@ -270,5 +292,15 @@ span {
 }
 
 .overlay.active, .share-panel.active {
+    pointer-events: auto;  /* Allows clicking when the modal is active */
+}
+
+  /* Assuming .overlay and .share-panel are your modal elements */
+  .overlay, .appt-panel {
+    pointer-events: none;  /* Ensures that when hidden, elements cannot be interacted with */
+    transition: all 0.3s;  /* Optional: for smooth transitions */
+}
+
+.overlay.active, .appt-panel.active {
     pointer-events: auto;  /* Allows clicking when the modal is active */
 }

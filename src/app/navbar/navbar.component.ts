@@ -1,6 +1,7 @@
 import { Component, ElementRef, HostListener, Renderer2 } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { BookingComponent } from '../booking/booking.component';
 
 interface IsActiveMap {
   [key: number]: boolean;
@@ -9,7 +10,7 @@ interface IsActiveMap {
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, BookingComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
@@ -40,6 +41,7 @@ export class NavbarComponent {
   };
 
   showSharePanel = false;
+  showApptPanel = false;
 
   toggleActive(divNumber: number) {
     switch (divNumber) {
@@ -75,6 +77,19 @@ export class NavbarComponent {
       event.stopPropagation(); // Prevent event from bubbling up and triggering the overlay click event
     }
   }
+
+  toggleApptPanel(event?: MouseEvent) {
+    this.showApptPanel = !this.showApptPanel;
+    if (this.showApptPanel) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    if (event) {
+      event.stopPropagation(); // Prevent event from bubbling up and triggering the overlay click event
+    }
+  }
+
 
   shareOnFacebook() {
     const shareUrl = 'https://example.com'; // Replace with your website URL

@@ -78,7 +78,7 @@
                 Estimate</button>
         </div>
         <div class="col request-appt-container">
-            <button type="button" class="btn btn-outline-light top-btns">Set an Appointment</button>
+            <button type="button" class="btn btn-outline-light top-btns" (click)="toggleApptPanel()">Set an Appointment</button>
         </div>
     </div>
 
@@ -121,4 +121,9 @@
     <div class="platform" (click)="shareOnLinkedIn()"><i class="bi bi-linkedin"></i></div>
     <div class="platform" (click)="shareOnReddit()"><i class="bi bi-reddit"></i></div>
     <div class="platform" (click)="shareOnEmail()"><i class="bi bi-envelope"></i></div>
+</div>
+
+<div class="overlay" [ngClass]="{ 'active': showApptPanel }" (click)="toggleApptPanel($event)"></div>
+<div class="appt-panel" [ngClass]="{ 'active': showApptPanel }">
+    <app-booking></app-booking>
 </div>

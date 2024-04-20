@@ -193,6 +193,7 @@ span {
 }
 
 .appt-panel {
+    width: 90%;
     position: fixed;
     top: 50%;
     left: 50%;
